@@ -1,0 +1,11 @@
+import mysql.connector
+mydb = mysql.connector.connect(
+       host = "localhost",
+       user = "sachi",
+       passwd= "password"
+       database = "employeedb"
+)
+
+mycursor = mydb.cursor()
+
+mycursor.execute("CREATE DATABASE employee (name VARCHAR(50), age INTEGER(10), ")
