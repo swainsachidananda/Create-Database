@@ -1,11 +1,36 @@
-import mysql.connector
-mydb = mysql.connector.connect(
-       host = "localhost",
-       user = "sachi",
-       passwd= "password"
-       database = "employeedb"
-)
+from tkinter import *
+from tkinter ttk
+from PIL import Image, ImageTK
 
-mycursor = mydb.cursor()
-
-mycursor.execute("CREATE DATABASE employee (name VARCHAR(50), age INTEGER(10), ")
+class Employee:
+       def __init__(self, root):
+              self.root = root
+              self.root.geometry("1530 * 790 + 0 +0")
+              self.root.title('Employee Manangement System')
+              
+              lbl_title = Label(self.root, text = 'EMPLOYEE MANAGEMENT SYSTEM', font='times now roman', 37, 'bold'), fg='darkblue', bg='white')
+              lbl_title.place(x=0, y=0, width=1530, height=50)
+              # logo
+              img_logo = Image.open('college_images/emplogo.png')
+              img_logo.resize((50, 50), Image.ANTIALIAS)
+              self.photo_logo=ImageTK.PhotoImage(img_logo)
+              
+              self.logo=Label(self.root, image=self.photologo)
+              self.photo.place((x=270, y=0, width=50, height=50))
+              
+              img_frame = Frame(self.root, bd=2, releif=RIDGE, bg= 'white')
+              img_frame.place(x=0, y=50, width=1530, height=160)
+              
+              # 1st
+              img1 = Image.open('college_images/emp5.jpg')
+              img1 = img1.resize((50, 50), Image.ANTIALIAS)
+              self.photo1=ImageTK.PhotoImage(img_1)
+              
+              self.logo=Label(self.root, image=self.photologo)
+              self.photo.place((x=270, y=0, width=50, height=50))
+              
+              
+if __name__ = "__main__":
+       root = Tk()
+       obj = Employee(root)
+       root = mainloop()
